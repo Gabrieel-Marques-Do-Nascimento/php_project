@@ -15,7 +15,7 @@ $email = $_POST['email'];
 $telefone = $_POST['telefone'];
 $date_nasc = $_POST['data'];
 
-$result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,telefone,date_nasc) VALUES ($nome','$email','$telefone','$date_nasc')");
+$result = mysqli_query($conexao, "INSERT INTO pessoas(nome,email,telefone,date_nasc) VALUES ($nome','$email','$telefone','$date_nasc')");
 }
 
 ?>

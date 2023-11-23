@@ -4,7 +4,7 @@
 $dbHost = 'Localhost';
 $dbusername ='root';
 $dbpassword = '';
-$dbname = 'login';
+$dbname = 'cadastro-web';
 
 $conexao = new mysqli($dbHost,$dbusername,$dbpassword,$dbname );
 
