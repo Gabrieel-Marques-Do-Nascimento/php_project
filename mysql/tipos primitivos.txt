@@ -11,7 +11,7 @@ criar tabela :
       nascimento tipo( num )
        );
 
-
+pra Entender a tabela use : describe nome da tabela
 
 
 
