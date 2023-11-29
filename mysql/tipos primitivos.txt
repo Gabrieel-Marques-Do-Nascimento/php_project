@@ -1,0 +1,255 @@
+banco de dados contem tabelas contem registros são compostas por campos
+
+criar banco de dados : CREATE DATABASE NOME
+criar tabela : CREATE TABLE pessoas ( campos separados por virgula );
+
+criar tabela :
+   USE BancoDeDadosNome
+ CREATE TABLE pessoas (
+     nome tipo( num ) ,
+     sobrenome varchar( 30 ) ,
+      nascimento tipo( num )
+       );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Números (Numeric)
+No MySQL, os principais tipos de dados numéricos são:
+
+INT (Integer):
+Representa números inteiros, positivos ou negativos.
+
+Tamanho padrão é de 4 bytes, permitindo armazenar valores na faixa de -2.147.483.648 a 2.147.483.647 (ou de -2^31 a 2^31-1).
+
+BIGINT:
+Representa números inteiros maiores, com um tamanho de 8 bytes.
+
+Permite armazenar valores na faixa de -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807 (ou de -2^63 a 2^63-1).
+
+FLOAT:
+Representa números de ponto flutuante de precisão simples.
+
+Armazena valores aproximados com 4 bytes de tamanho.
+
+Adequado para casos em que precisão adicional não é crucial, como cálculos científicos ou gráficos.
+
+DOUBLE:
+Representa números de ponto flutuante de precisão dupla.
+
+Armazena valores aproximados com 8 bytes de tamanho.
+
+Oferece maior precisão em comparação com FLOAT, sendo indicado para cálculos financeiros e científicos mais complexos.
+
+DECIMAL ou NUMERIC:
+Representa números decimais com precisão fixa.
+
+Permite definir a precisão (número total de dígitos) e a escala (número de dígitos após o ponto decimal).
+
+Adequado para cálculos financeiros e casos em que a precisão é crítica.
+
+Esses tipos de dados numéricos são essenciais para a representação precisa e eficiente de valores numéricos no banco de dados, uma vez que eles permitem que você realize operações aritméticas, cálculos estatísticos e manipulação de dados quantitativos de maneira eficaz.
+
+Além disso, o uso correto desses tipos de dados ajuda a otimizar o uso de espaço de armazenamento e melhorar o desempenho das consultas.
+
+
+
+
+
+
+
+
+
+Texto (Character)
+Os principais tipos de dados de texto no MySQL são:
+
+CHAR:
+O tipo CHAR armazena strings de tamanho fixo.  se tiver uma letra vai guardar 1 caracter
+
+Você precisa especificar o tamanho ao criar a coluna CHAR, e o MySQL aloca exatamente esse número de caracteres para cada valor armazenado, preenchendo com espaços em branco caso o valor seja menor que o tamanho definido.
+
+Por exemplo, se você define uma coluna CHAR(10) e insere o valor “ABC” nessa coluna, o MySQL armazenará “ABC ” (com sete espaços em branco) no banco de dados.
+
+VARCHAR:
+O VARCHAR é usado para armazenar strings de tamanho variável. 
+
+É necessário especificar o tamanho máximo da coluna ao criá-la, mas o MySQL alocará apenas o espaço necessário para armazenar os valores inseridos, economizando espaço de armazenamento.
+
+Por exemplo, se você define uma coluna VARCHAR(10) e insere o valor “ABC” nessa coluna, o MySQL armazenará apenas “ABC”, sem preenchimento adicional com espaços em branco.
+
+
+
+
+TEXT:
+O tipo TEXT é usado para armazenar textos de comprimento variável, geralmente com tamanhos maiores que os permitidos por VARCHAR.
+
+O MySQL oferece quatro variantes do tipo TEXT: TINYTEXT, TEXT, MEDIUMTEXT e LONGTEXT, com tamanhos máximos crescentes.
+
+O TEXT é ideal para armazenar grandes quantidades de texto, como parágrafos, documentos ou conteúdos de blogs.
+
+ENUM:
+Por fim, o ENUM cria uma lista de valores permitidos para uma coluna.
+
+Ao criar a coluna, você pode definir os valores possíveis e o MySQL garantirá que a coluna armazene somente esses valores.
+
+Por exemplo, você pode definir uma coluna ENUM(‘sim’, ‘não’) para armazenar apenas “sim” ou “não” como valores válidos.
+
+Esses tipos de dados são úteis para armazenar informações que não possuem um formato estruturado fixo, como números ou datas. Eles permitem que você armazene, recupere e manipule dados de texto de maneira flexível, tornando-os uma parte essencial do modelo de dados do MySQL.
+
+
+
+
+
+Data e Hora (Date and Time)
+Por fim, no MySQL, os principais tipos de dados de data e hora são:
+
+DATE:
+O tipo DATE é usado para armazenar datas no formato “AAAA-MM-DD” (ano-mês-dia).
+
+Ele pode representar datas de 1000-01-01 a 9999-12-31.
+
+TIME:
+O tipo TIME é usado para armazenar horários no formato “HH:MM:SS” (hora:minuto:segundo).
+
+Pode representar horários de -838:59:59 a 838:59:59.
+
+DATETIME:
+O tipo DATETIME armazena datas e horários combinados no formato “AAAA-MM-DD HH:MM:SS” (ano-mês-dia hora:minuto:segundo).
+
+Ele pode representar datas e horários de 1000-01-01 00:00:00 a 9999-12-31 23:59:59.
+
+TIMESTAMP:
+O TIMESTAMP é usado para armazenar datas e horários, assim como o DATETIME.
+
+No entanto, o TIMESTAMP também é usado para rastrear automaticamente a data e hora da última modificação de um registro na tabela. Isso é útil para registrar alterações e atualizações.
+
+YEAR:
+Por fim, o tipo YEAR é usado para armazenar anos de quatro dígitos, como “AAAA” (por exemplo, 2023).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tipos de dados são uma forma de classificar as informações que serão armazenados no banco de dados.
+Entender os tipos de dados que podem ser armazenados no banco e a que situações se adequam é importante para projetar um banco de dados o mais eficiente possível. Veja, a seguir, alguns dos tipos de dados mais comuns no MySQL, acompanhado de uma breve descrição.
+
+Antes de definir exatamente o tipo de dado que você deseja definir, vale a pena prestar atenção nas seguintes diretrizes, para ajudar a ter melhores resultados:
+
+os tipos de valores que podem ser usados;
+que tamanhos podem ter
+as operações que podem ser realizadas;
+seus significados;
+se podem/serão indexados
+como devem ser armazenados etc.
+Tipos de dados numéricos no MySQL
+O MySQL tem todos os tipos numéricos possíveis, o que inclui exatos, aproximados, inteiros, de ponto fixo, ponto flutuante etc. A lista, abaixo, mostra um resumo dos tipos de dados possíveis no MySQL:
+
+TINYINT — número inteiro muito pequeno (tiny);
+SMALLINT — número inteiro pequeno;
+MEDIUMINT — número inteiro de tamanho médio;
+INT — número inteiro de tamanho comum;
+BIGINT — número inteiro de tamanho grande;
+DECIMAL — número decimal, de ponto fixo;
+FLOAT — número de ponto flutuante de precisão simples (32 bits);
+DOUBLE — número de ponto flutuante de precisão dupla (64 bits);
+BIT — um campo de um bit.
+
+
+
+
+
+
+Tipos de dados em strings
+Strings são cadeias de caracteres. No MySQL, uma string pode ter qualquer conteúdo, desde texto simples a dados binários – tais como imagens e arquivos. Cadeias de caracteres podem ser comparadas e ser objeto de buscas.
+
+CHAR — uma cadeia de caracteres (string), de tamanho fixo e não-binária;
+VARCHAR — uma string de tamanho variável e não-binária;
+BINARY — uma string binária de tamanho fixo;
+VARBINARY — uma string binária de tamanho variável;
+BLOB — um BLOB (Binary Large OBject – OBjeto Grande Binário) pequeno;
+TINYBLOB — um BLOB muito pequeno;
+MEDIUMBLOB — um BLOB de tamanho médio;
+LONGBLOB — um BLOB grande;
+TINYTEXT — uma string não-binária e de tamanho bem reduzido;
+TEXT — uma string não-binária e pequena;
+MEDIUMTEXT — uma string de tamanho comum e não-binária;
+LONGTEXT — uma string não-binária de tamanho grande;
+ENUM — de acordo com o manual do MySQL, é uma string, com um valor que precisa ser selecionado de uma lista predefinida na criação da tabela;
+SET — é um objeto que pode ter zero ou mais valores – cada um dos quais precisa ser escolhido de uma lista de valores predeterminados quando da criação da tabela.
+
+
+
+
+
+Armazenamento de data e hora
+Há várias opções para armazenar dados relacionados a data e hora. Se você quiser apenas armazenar o ano referente a um evento, pode usar o tipo YEAR. O tipo TIMESTAMP pode ser usado para acompanhar as mudanças ocorridas em um campo de uma tabela. Veja os tipos e suas descrições:
+
+
+DATE — o valor referente a uma data no formato 'CCYY-MM-DD'. Por exemplo 1985-11-25 (ano-mês-dia). O 'CC' se refere aos dois dígitos do século (Century, em inglês);
+TIME — um valor horário no formato 'hh:mm:ss' (hora:minutos:segundos);
+TIMESTAMP — timestamp é uma sequência de caracteres ou informação codificada que identifica uma marca temporal ou um dado momento em que um evento ocorreu. No MySQL, ele tem o formato 'CCYY-MM-DD hh:mm:ss' – neste caso, seguem a padronização ISO 8601;
+YEAR — armazena um ano no formato 'CCYY' ou 'YY';
+
+
+
+
+Dados espaciais
+O MySQL tem suporte a tipos de dados que correspondem às classes OpenGIS. Alguns destes carregam valores geométricos simples:
+
+GEOMETRY
+POINT
+LINESTRING
+POLYGON
+O GEOMETRY pode armazenar qualquer tipo de valor geométrico. Os outros valores simples (POINT, LINESTRING e POLYGON) têm seus valores restritos aos tipos geométricos a que se referem.
+Os outros, que seguem listados, carregam valores relativos a coleções/coletivos:
+
+GEOMETRYCOLLECTION
+MULTILINESTRING
+MULTIPOINT
+MULTIPOLYGON
+Assim, GEOMETRYCOLLECTION pode armazenar coletâneas de objetos de qualquer tipo. Os outros tipos coletivos (MULTILINESTRING, MULTIPOLYGON e GEOMETRYCOLLECTION) restringem-se a cada forma geométrica particular.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
