@@ -1,0 +1,97 @@
+banco de dados contem tabelas contem registros são compostas por campos  : ---------------------------------------------------------------
+
+criar banco de dados : CREATE DATABASE NOME
+criar tabela : CREATE TABLE pessoas ( campos separados por virgula );
+
+criar tabela :
+   USE BancoDeDadosNome
+ CREATE TABLE pessoas (
+     nome tipo( num ) ,
+     sobrenome varchar( 30 ) ,
+      nascimento tipo( num )
+       );
+
+pra Entender a tabela use : describe nome da tabela
+
+
+melhorando a estrutura : ---------------------------------------------------------------
+apagar banco de dados =  drop database nome ;
+
+criar banco de dados =  CREATE DATABASE nome (
+                          nome varchar( 30 ) NOT NULL ,
+                          nascimento date,
+                          sexo enum( 'm' , 'f' ),
+                          peso decimal(5,2),
+                          altura decimal(3,2),
+                          nacionalidade varchar(20) DEFAULT 'Brasil'
+                         )
+                        DEFAULT CHARACTER SET utf8
+                        DEFAULT COLLATE utf8_general_ci ; 
+                        
+
+
+not null torna campo obrigatorio
+
+enum( 'm' , 'f' )  define valores expecificos q deve ser digitado tipo so pode digitar m masculino ou f feminino
+
+decimal(5,2)  5 total de casas 2 numeros apos a virgula
+
+DEFAULT 'brasil'  por padrao sera brasileiro se nao digitado
+
+Executar com crtl enter ou bitton raioxinho com 1
+ : ---------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+ : ---------------------------------------------------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ : ---------------------------------------------------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ : ---------------------------------------------------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ : ---------------------------------------------------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ : ---------------------------------------------------------------
+ 
+ 
