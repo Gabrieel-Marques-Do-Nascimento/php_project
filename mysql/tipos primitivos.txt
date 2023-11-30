@@ -1,30 +1,3 @@
-banco de dados contem tabelas contem registros são compostas por campos
-
-criar banco de dados : CREATE DATABASE NOME
-criar tabela : CREATE TABLE pessoas ( campos separados por virgula );
-
-criar tabela :
-   USE BancoDeDadosNome
- CREATE TABLE pessoas (
-     nome tipo( num ) ,
-     sobrenome varchar( 30 ) ,
-      nascimento tipo( num )
-       );
-
-pra Entender a tabela use : describe nome da tabela
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
