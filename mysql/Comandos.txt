@@ -38,7 +38,7 @@ criar banco de dados =  CREATE DATABASE nome
 
 not null torna campo obrigatorio
 
-id vai ser o identificador a chave orimaria cada pesso vai ter um numeto como chave
+id vai ser o identificador a chave primaria cada pesso vai ter um numero como chave
 
 enum( 'm' , 'f' )  define valores expecificos q deve ser digitado tipo so pode digitar m masculino ou f feminino
 
@@ -53,6 +53,7 @@ os nomrs dos campos da tabela pode ser feito dentre crase ` . ` asim podr ser us
  inserir dados na tabela ( INSERT INTO ) :
  abre o mysql click no banco de dados ou ( USE BancoDeDadosNome ; )  
  entre parenteses insira todos os nomes dos campos  opicional pode ser colocado entre crases `` logo depois entre parenteses e aspas simples as informacoes correspondentr a data e ano mes e dia 
+ 
  INSERT INTO NomeTabelas
  ( nome , nascimento , sexo , peso , altura , nacionalidade )
  VALUES
