@@ -59,15 +59,17 @@ os nomrs dos campos da tabela pode ser feito dentre crase ` . ` asim podr ser us
  VALUES
  (  'gabriel','2002-08-21', 'm','60.5','1.70','Brasil');
  
+----------------selecione todos os dados --------------------
+select * from NomeTabelas ;
 
 
 
 
 
 
-
-
-obs : entre aspas simples sao dados tipo 'gabriel' sem aspas sao intrets  EM MAIUSCULOS SAO OS COMANDOS  o ID 
+obs : entre aspas simples sao dados tipo 'gabriel' sem aspas sao intrets  EM MAIUSCULOS SAO OS COMANDOS  o ID e o numeto de identificacao caso queira colocar o ID ex:( ID, nome ,......) ( DEFAULT , 'gabriel' ); DEFAULT o mesmo que padrao           id padrao 
+se a ordem dos campos for a mesma da tabela o  primero campo se torna opicional  ( id , nome, ....) esse 
+tem como add dados de mais de uma pesspa ex: ( 'gabriel'......),('camila','2005-12-16', ......) ; separando os dados por virgula ponto e virgula no final
  : ---------------------------------------------------------------
  
  
