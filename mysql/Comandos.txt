@@ -17,20 +17,28 @@ pra Entender a tabela use : describe nome da tabela
 melhorando a estrutura : ---------------------------------------------------------------
 apagar banco de dados =  drop database nome ;
 
-criar banco de dados =  CREATE DATABASE nome (
+criar banco de dados =  CREATE DATABASE nome
+                         DEFAULT CHARACTER SET utf8
+                        DEFAULT COLLATE utf8_general_ci ;
+                        
+ crianfo tabela =         CREATE table nome(
+                          id int NOT NULL AUTO_INCREMENT,
                           nome varchar( 30 ) NOT NULL ,
                           nascimento date,
                           sexo enum( 'm' , 'f' ),
                           peso decimal(5,2),
                           altura decimal(3,2),
-                          nacionalidade varchar(20) DEFAULT 'Brasil'
+                          nacionalidade varchar(20) DEFAULT 'Brasil',
+                          PRIMARY KEY ( id )
                          )
-                        DEFAULT CHARACTER SET utf8
-                        DEFAULT COLLATE utf8_general_ci ; 
+                         DEFAULT CHARSET = utf8
+                         ; 
                         
 
 
 not null torna campo obrigatorio
+
+id vai ser o identificador a chave orimaria cada pesso vai ter um numeto como chave
 
 enum( 'm' , 'f' )  define valores expecificos q deve ser digitado tipo so pode digitar m masculino ou f feminino
 
@@ -39,7 +47,10 @@ decimal(5,2)  5 total de casas 2 numeros apos a virgula
 DEFAULT 'brasil'  por padrao sera brasileiro se nao digitado
 
 Executar com crtl enter ou bitton raioxinho com 1
+
+os nomrs dos campos da tabela pode ser feito dentre crase ` . ` asim podr ser usado asentos e espacos
  : ---------------------------------------------------------------
+ criar banco dr dados na internet
 
 
 
