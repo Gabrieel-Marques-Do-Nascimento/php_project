@@ -50,7 +50,14 @@ Executar com crtl enter ou bitton raioxinho com 1
 
 os nomrs dos campos da tabela pode ser feito dentre crase ` . ` asim podr ser usado asentos e espacos
  : ---------------------------------------------------------------
- criar banco dr dados na internet
+ inserir dados na tabela ( INSERT INTO ) :
+ abre o mysql click no banco de dados ou ( USE BancoDeDadosNome ; )  
+ entre parenteses insira todos os nomes dos campos  opicional pode ser colocado entre crases `` logo depois entre parenteses e aspas simples as informacoes correspondentr a data e ano mes e dia 
+ INSERT INTO NomeTabelas
+ ( nome , nascimento , sexo , peso , altura , nacionalidade )
+ VALUES
+ (  'gabriel','2002-08-21', 'm','60.5','1.70','Brasil');
+ 
 
 
 
@@ -59,8 +66,7 @@ os nomrs dos campos da tabela pode ser feito dentre crase ` . ` asim podr ser us
 
 
 
-
-
+obs : entre aspas simples sao dados tipo 'gabriel' sem aspas sao intrets  EM MAIUSCULOS SAO OS COMANDOS  o ID 
  : ---------------------------------------------------------------
  
  
@@ -104,5 +110,13 @@ os nomrs dos campos da tabela pode ser feito dentre crase ` . ` asim podr ser us
  
  
  : ---------------------------------------------------------------
+ -------  DDL = LINGUAGEM DE DEFINICAO DE DADOS ----------------
+ CREATE TABLE .......
+ 
+ 
+ 
+ 
+ 
+ 
  
  
