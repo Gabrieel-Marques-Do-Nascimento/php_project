@@ -86,7 +86,7 @@ tem como add dados de mais de uma pesspa ex: ( 'gabriel'......),('camila','2005-
  
  ---------------- add coluna depois de um campo ----------------
  ALTER TABLE NomeTabelas 
- ADD COLUMN nome_do_campo VARCHAR(10) AFTER nome ; 
+ ADD COLUMN nome_do_campo_add VARCHAR(10) AFTER nome_de_campo_esistent ; 
  
 AFTER = depois ex: sobrenome AFTER primeiro_nome ; 
  ------------- ADD coluna como primeiro campo campo ------------
@@ -101,6 +101,10 @@ ALTER TABLE NomeTabelas
  
  MODIFY = modificar   so nao muda o nome_do_campo
  
+ 
+ --------------- renomear tabela -----------------
+ ALTER TABLE Nome_Tabela 
+ RENAME TO outro_nome ;
  
  
  
