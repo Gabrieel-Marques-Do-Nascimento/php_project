@@ -95,17 +95,17 @@ ALTER TABLE NomeTabelas
  
  -----------------  alterar um campo , coluna ----------------
  ALTER TABLE NomeTabelas 
- MODIFY COLUMN nome_do_campo VARCHAR(25) ; 
+ MODIFY COLUMN nome_do_campo VARCHAR(25) ; // foi de 10 para 25
  
  
  
- MODIFY = modificar
+ MODIFY = modificar   so nao muda o nome_do_campo
  
  
  
  
  obs : DESCRIBE NOME ;  descrocao  ou abreviado DESC NOME ;
- 
+ se vc colocar o campo como not null e vc add como nulo o campo da conflito e some o campo
  : ---------------------------------------------------------------
  
  
