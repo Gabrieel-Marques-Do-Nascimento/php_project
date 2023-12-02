@@ -78,6 +78,7 @@ tem como add dados de mais de uma pesspa ex: ( 'gabriel'......),('camila','2005-
  ALTER TABLE NomeTabelas // -------alterar tabela -------
  ADD COLUMN  nome VARCHAR(10); // adicionar coluna mesmo que um campo novo
  
+ ----------------- deletar 
  
  ------------- escluir coluna , CAMPO ---------------
  ALTER TABLE NomeTabelas
@@ -93,6 +94,7 @@ AFTER = depois ex: sobrenome AFTER primeiro_nome ;
 ALTER TABLE NomeTabelas 
  ADD COLUMN nome_do_campo int FIRST  ;  
  
+ FIRST = add campo como primeiro
  -----------------  alterar um campo , coluna ----------------
  ALTER TABLE NomeTabelas 
  MODIFY COLUMN nome_do_campo VARCHAR(25) ; // foi de 10 para 25
@@ -107,6 +109,30 @@ ALTER TABLE NomeTabelas
  RENAME TO outro_nome ;
  
  
+ --------------- criar ou apagar se ela esxistir ---------------
+ CREATE TABLE IF NOT EXISTS Nome_Tabela (
+ nome VARCHAR(30) NOT NULL UNIQUE,
+ descricao TEXT ,
+ carga_hora INT  UNSIGNED,
+ total_aulas INT UNSIGNED,
+ ano YEAR DEFAULT '2023'
+ )
+ DEFAULT CHARSET = utf8 ;
+ 
+ 
+ crou a tabela esqueceu do ID 
+ ALTER TABLE Nome_Tabela
+ ADD COLUMN idnome INT FIRST ;
+ 
+ ALTER TABLE Nome_Tabela 
+ ADD PRIMARY KEY( idnome ) ;
+ 
+ 
+ 
+ 
+ UNIQUE = nao dei por dois nomes iguis
+ UNSIGNED = sem sinal economisa 1 bite pra cada regitro como carga registrada
+ DEFAULT '2023' = 2023 como padrao
  
  obs : DESCRIBE NOME ;  descrocao  ou abreviado DESC NOME ;
  se vc colocar o campo como not null e vc add como nulo o campo da conflito e some o campo
